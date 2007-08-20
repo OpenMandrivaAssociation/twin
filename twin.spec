@@ -1,6 +1,6 @@
 %define name twin 
 %define version 0.4.6
-%define release 5mdk
+%define release %mkrel 5
 
 %define major 0
 %define libname %mklibname %name %major
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/twin/system.*
 %_libdir/twin/.twenvrc.sh
 %_libdir/twin/.twinrc
-%_mandir/man1/%name.1.bz2
+%_mandir/man1/%name.*
 %dir %_datadir/%name
 %_datadir/%name/*
 
