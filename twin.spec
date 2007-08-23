@@ -1,6 +1,6 @@
 %define name twin 
 %define version 0.4.6
-%define release %mkrel 5
+%define release %mkrel 6
 
 %define major 0
 %define libname %mklibname %name %major
