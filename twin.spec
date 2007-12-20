@@ -16,7 +16,7 @@ License: GPL
 Group: Terminals
 Url: http://linuz.sns.it/~max/twin/
 BuildRequires: bison automake1.8
-BuildRequires: X11-devel libgtk+-devel libgpm-devel libggi-devel
+BuildRequires: X11-devel gtk-devel libgpm-devel libggi-devel xpm-devel
 #Prefix: %{_prefix}
 
 %description
