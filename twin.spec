@@ -15,6 +15,7 @@ Patch0: twin-0.4.6-autoconf-fix.patch.bz2
 License: GPL
 Group: Terminals
 Url: http://linuz.sns.it/~max/twin/
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: bison automake1.8
 BuildRequires: X11-devel gtk-devel libgpm-devel libggi-devel xpm-devel
 #Prefix: %{_prefix}
