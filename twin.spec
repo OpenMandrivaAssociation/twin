@@ -4,12 +4,13 @@
 
 Summary:	A text mode Windows Manager
 Name:		twin
-Version:	0.6.0
-Release:	%mkrel 3
+Version:	0.6.2
+Release:	%mkrel 1
 License:	GPLv2
 Group:		Terminals
 Url:		http://sourceforge.net/projects/twin/
 Source0:	http://downloads.sourceforge.net/twin/%{name}-%{version}.tar.bz2
+Requires:	%{libname} = %{version}-%{release}
 BuildRequires:	bison
 BuildRequires:	X11-devel gtk-devel libgpm-devel libggi-devel xpm-devel
 BuildRequires:	libltdl-devel
