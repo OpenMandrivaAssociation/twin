@@ -5,7 +5,7 @@
 Summary:	A text mode Windows Manager
 Name:		twin
 Version:	0.6.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2
 Group:		Terminals
 Url:		http://sourceforge.net/projects/twin/
