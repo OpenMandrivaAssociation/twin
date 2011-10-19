@@ -1,20 +1,26 @@
+# this is the tutf major
 %define major 0
+# tw major
+%define twmajor 4
 %define libname %mklibname %{name} %{major}
-%define libnamedevel %mklibname %{name} %{major} -d
+%define develname %mklibname %{name} -d
 
 Summary:	A text mode Windows Manager
 Name:		twin
 Version:	0.6.2
-Release:	%mkrel 2
+Release:	3
 License:	GPLv2
 Group:		Terminals
 Url:		http://sourceforge.net/projects/twin/
 Source0:	http://downloads.sourceforge.net/twin/%{name}-%{version}.tar.bz2
 Requires:	%{libname} = %{version}-%{release}
 BuildRequires:	bison
-BuildRequires:	X11-devel gtk-devel libgpm-devel libggi-devel xpm-devel
+BuildRequires:	X11-devel
+BuildRequires:	gtk-devel
+BuildRequires:	libgpm-devel
+BuildRequires:	libggi-devel
+BuildRequires:	xpm-devel
 BuildRequires:	libltdl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Twin is a text-mode windowing environment:
@@ -33,14 +39,15 @@ Provides:	lib%{name} = %{version}-%{release}
 Twin is a text-mode windowing environment.
 This package contain shared libraries to run twin.
 
-%package -n %{libnamedevel}
+%package -n %{develname}
 Summary:	Devellopment files from twin
 Group:		Development/Other
 Requires:	%{libname} = %{version}-%{release}
 Provides:	lib%{name}-devel = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname %{name}0 -d}
 
-%description -n %{libnamedevel}
+%description -n %{develname}
 Twin is a text-mode windowing environment.
 You need this package to build twin applications.
 
@@ -80,20 +87,22 @@ rm -rf %{buildroot}
 %{_libdir}/twin/system.*
 %{_libdir}/twin/.twenvrc.sh
 %{_libdir}/twin/.twinrc
+# from libname pkg, these are modules not the twin app
+%dir %{_libdir}/twin
+%dir %{_libdir}/twin/modules
+%{_libdir}/twin/modules/*.so.*
+%dir %{_libdir}/twin/modules/HW
+%{_libdir}/twin/modules/HW/*.so.*
 %{_mandir}/man1/%{name}.*
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_libdir}/*.so.*
-%dir %{_libdir}/twin
-%dir %{_libdir}/twin/modules
-%{_libdir}/twin/modules/*.so.*
-%dir %{_libdir}/twin/modules/HW
-%{_libdir}/twin/modules/HW/*.so.*
+%{_libdir}/libTutf.so.%{major}*
+%{_libdir}/libTw.so.%{twmajor}*
 
-%files -n %{libnamedevel}
+%files -n %{develname}
 %defattr(-,root,root)
 %dir %{_includedir}/Tw
 %{_includedir}/Tw/*
