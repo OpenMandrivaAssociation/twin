@@ -110,3 +110,70 @@ rm -rf %{buildroot}
 %{_includedir}/Tutf/*
 %{_libdir}/*.so
 %{_libdir}/*.a
+
+
+%changelog
+* Thu Oct 20 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.6.2-3
++ Revision: 705450
+- dropped major from devel pkg
+  moved module libs to the app pkg
+
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 0.6.2-2mdv2011.0
++ Revision: 615280
+- the mass rebuild of 2010.1 packages
+
+* Mon Feb 15 2010 Shlomi Fish <shlomif@mandriva.org> 0.6.2-1mdv2010.1
++ Revision: 506241
+- Upgrade twin to version 0.6.2
+
+* Sun Sep 20 2009 Thierry Vignaud <tv@mandriva.org> 0.6.0-3mdv2010.0
++ Revision: 445570
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 0.6.0-2mdv2009.0
++ Revision: 269443
+- rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Fri Jun 06 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 0.6.0-1mdv2009.0
++ Revision: 216301
+- update to new version 0.6.0
+- drop not needed patch
+- spec file clean
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - BR gtk-devel & xpm-devel
+    - kill re-definition of %%buildroot on Pixel's request
+    - use %%mkrel
+
+  + Olivier Thauvin <nanardon@mandriva.org>
+    - Import twin
+
+
+
+* Mon Nov 01 2004 Christiaan Welvaart <cjw@daneel.dyndns.org> 0.4.6-5mdk
+- fix build with new autotools
+- add BuildRequires: X11-devel libgtk+-devel libgpm-devel libggi-devel
+
+* Sat Aug 30 2003 Marcel Pol <mpol@gmx.net> 0.4.6-4mdk
+- buildrequires bison
+
+* Sun May 25 2003 Olivier Thauvin <thauvin@aerov.jussieu.fr> 0.4.6-3mdk
+- distlint again
+
+* Thu May 01 2003 Olivier Thauvin <thauvin@aerov.jussieu.fr> 0.4.6-2mdk
+- distlint fix
+
+* Mon Mar 31 2003 Olivier Thauvin <thauvin@aerov.jussieu.fr> 0.4.6-1mdk
+- 2.4.6
+
+* Wed Feb 26 2003 Olivier Thauvin <thauvin@aerov.jussieu.fr> 0.4.5-2mdk
+- fix configure
+
+* Tue Feb 25 2003 Olivier Thauvin <thauvin@aerov.jussieu.fr> 0.4.5-1mdk
+- First mdk package
