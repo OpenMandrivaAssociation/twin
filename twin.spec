@@ -4,6 +4,7 @@
 %define twmajor 4
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
+%define debug_package          %{nil}
 
 Summary:	A text mode Windows Manager
 Name:		twin
@@ -43,7 +44,6 @@ This package contain shared libraries to run twin.
 Summary:	Devellopment files from twin
 Group:		Development/Other
 Requires:	%{libname} = %{version}-%{release}
-Provides:	lib%{name}-devel = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%{mklibname %{name}0 -d}
 
