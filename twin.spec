@@ -8,7 +8,7 @@
 Summary:	A text mode Windows Manager
 Name:		twin
 Version:	0.6.2
-Release:	3
+Release:	4
 License:	GPLv2
 Group:		Terminals
 Url:		http://sourceforge.net/projects/twin/
@@ -17,8 +17,8 @@ Requires:	%{libname} = %{version}-%{release}
 BuildRequires:	bison
 BuildRequires:	X11-devel
 BuildRequires:	gtk-devel
-BuildRequires:	libgpm-devel
-BuildRequires:	libggi-devel
+BuildRequires:	gpm-devel
+BuildRequires:	ggi-devel
 BuildRequires:	xpm-devel
 BuildRequires:	libltdl-devel
 
