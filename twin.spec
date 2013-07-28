@@ -18,7 +18,7 @@ BuildRequires:	bison
 BuildRequires:	X11-devel
 BuildRequires:	gtk-devel
 BuildRequires:	gpm-devel
-BuildRequires:	ggi-devel
+BuildRequires:	libggi-devel
 BuildRequires:	xpm-devel
 BuildRequires:	libltdl-devel
 
