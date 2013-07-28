@@ -16,7 +16,7 @@ Source0:	http://downloads.sourceforge.net/twin/%{name}-%{version}.tar.bz2
 Requires:	%{libname} = %{version}-%{release}
 BuildRequires:	bison
 BuildRequires:	pkgconfig(x11)
-BuildRequires:	gtk-devel
+BuildRequires:	gtk+-devel
 BuildRequires:	gpm-devel
 BuildRequires:	libggi-devel
 BuildRequires:	xpm-devel
