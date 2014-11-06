@@ -9,7 +9,7 @@
 Summary:	A text mode Windows Manager
 Name:		twin
 Version:	0.6.2
-Release:	4
+Release:	5
 License:	GPLv2
 Group:		Terminals
 Url:		http://sourceforge.net/projects/twin/
@@ -19,7 +19,6 @@ BuildRequires:	bison
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	gtk+-devel
 BuildRequires:	gpm-devel
-BuildRequires:	libggi-devel
 BuildRequires:	xpm-devel
 BuildRequires:	libltdl-devel
 
@@ -56,7 +55,7 @@ You need this package to build twin applications.
 
 %build
 %define _disable_ld_no_undefined 1
-%configure2_5x \
+%configure \
 	--enable--shlibs=yes \
 	--enable--modules=yes \
 	--enable--unicode=yes \
@@ -94,4 +93,3 @@ make
 %dir %{_includedir}/Tutf
 %{_includedir}/Tutf/*
 %{_libdir}/*.so
-%{_libdir}/*.a
