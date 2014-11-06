@@ -93,3 +93,4 @@ make
 %dir %{_includedir}/Tutf
 %{_includedir}/Tutf/*
 %{_libdir}/*.so
+%{_libdir}/*.a
