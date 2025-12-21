@@ -15,6 +15,11 @@ Group:		Terminals
 Url:		https://sourceforge.net/projects/twin/
 Source0:	http://downloads.sourceforge.net/twin/%{name}-%{version}.tar.bz2
 Requires:	%{libname} = %{version}-%{release}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	bison
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	gtk+-devel
